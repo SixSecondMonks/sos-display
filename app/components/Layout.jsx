@@ -38,7 +38,9 @@ let Layout = React.createClass({
                 <SocketIOPanel />
               </Col>
               <Col xs={9} md={6}>
-                <Statistics data={this.state.data.information} kinectData={this.state.kinectData} />
+                <Statistics data={this.state.data.information}
+                            kinectData={this.state.kinectData}
+                            audioData={this.state.data.soundWaveData} />
               </Col>
             </Row>
           </Grid>

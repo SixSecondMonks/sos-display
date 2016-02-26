@@ -109,9 +109,15 @@ module.exports = Reflux.createStore({
     this.trigger(this.data);
   },
 
+  onUpdateSoundWave: function(buffer) {
+    this.data.soundWaveData = Array.from(buffer);
+    this.trigger(this.data);
+  },
+
   getInitialState: function() {
     let index = 0;
     this.data = {
+      soundWaveData: [],
       control: {
         width: 192,
         height: 320,
