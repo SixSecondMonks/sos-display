@@ -51,9 +51,8 @@ module.exports = React.createClass({
                 <tr>
                   <th>Audio Waveform</th>
                   <th>
-                    <Sparklines data={this.props.audioData} limit={200} width={200} height={60}>
+                    <Sparklines data={this.props.audioData} limit={2000} width={500} height={60} min={0} max={256}>
                       <SparklinesLine color="#5aff17" />
-                        <SparklinesReferenceLine type="avg" />
                       <SparklinesSpots />
                     </Sparklines>
                    </th>
