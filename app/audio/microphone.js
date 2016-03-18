@@ -13,7 +13,7 @@ export default function() {
     const analyzer = context.createAnalyser();
     analyzer.fftSize = 2048;
     let dataArray = new Uint8Array(analyzer.frequencyBinCount);
-    analyzer.getByteTimeDomainData(dataArray);
+    let frequency = new Uint8Array(analyzer.frequencyBinCount);
 
     getUserMedia.call(navigator,
                       { audio: true },
@@ -30,7 +30,7 @@ export default function() {
     // update every now and then
     setInterval(() => {
         analyzer.getByteTimeDomainData(dataArray);
-        console.log(dataArray);
-        actions.updateSoundWave(dataArray);
+        analyzer.getByteFrequencyData(frequency);
+        actions.updateSoundWave(dataArray, frequency);
     }, 100);
 }

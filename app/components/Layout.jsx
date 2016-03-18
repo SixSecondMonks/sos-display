@@ -40,7 +40,9 @@ let Layout = React.createClass({
               <Col xs={9} md={6}>
                 <Statistics data={this.state.data.information}
                             kinectData={this.state.kinectData}
-                            audioData={this.state.data.soundWaveData} />
+                            audioData={this.state.data.soundWaveData}
+                            frequencyData={this.state.data.frequencyData}
+                            />
               </Col>
             </Row>
           </Grid>

@@ -109,8 +109,9 @@ module.exports = Reflux.createStore({
     this.trigger(this.data);
   },
 
-  onUpdateSoundWave: function(buffer) {
+  onUpdateSoundWave: function(buffer, frequency) {
     this.data.soundWaveData = Array.from(buffer);
+    this.data.frequencyData = Array.from(frequency);
     this.trigger(this.data);
   },
 
