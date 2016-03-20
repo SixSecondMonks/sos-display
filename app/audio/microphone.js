@@ -12,7 +12,7 @@ export default function() {
     // set up the analyzer.
     const analyzer = context.createAnalyser();
     analyzer.fftSize = 2048;
-    let dataArray = new Uint8Array(analyzer.frequencyBinCount);
+    let dataArray = new Uint8Array(analyzer.fftSize);
     let frequency = new Uint8Array(analyzer.frequencyBinCount);
 
     getUserMedia.call(navigator,
