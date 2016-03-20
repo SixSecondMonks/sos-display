@@ -1,5 +1,7 @@
 uniform vec2 input_resolution;
 uniform float input_globalTime;
+uniform float frequency;
+uniform float amplitude;
 
 #define USE_IQ_SMIN 0
 

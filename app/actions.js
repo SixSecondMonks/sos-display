@@ -16,5 +16,8 @@ module.exports = Reflux.createActions([
 
   'toggleKinect',
   'toggleModeInformation',
-  'updateModeFPS'
+  'updateModeFPS',
+
+  // sound
+  'updateSoundWave'
 ]);
